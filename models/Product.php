@@ -18,7 +18,6 @@ class Product {
             $statement->bindParam(':precio', $this->price, PDO::PARAM_STR);
 
             $statement->execute();
-            echo "Insetion successfully";
         } catch (\Throwable $th) {
             echo "Error to add product: " . $th;
         }
@@ -36,11 +35,11 @@ class Product {
             $arr = $statement->fetchAll(PDO::FETCH_ASSOC);
 
             foreach ($arr as $row) {
-                echo '<form method="post" action="controllers/product-delete.php" class="m-2 d-flex justify-content-around">';
+                echo '<form method="post" action="controllers/product-delete.php" class="m-2 row">';
                 echo '<input placeholder="id" class="input-id" name="id" value=' . $row['id'] . '>' . $row['id'] . '</input>';
                 echo '<p class="px-4">Nombre: ' . $row['nombre'] . '</p>';
                 echo '<p class="px-4">Precio: ' . $row['precio'] . '</p>';
-                echo '<button type="submit" class="btn btn-danger">Eliminar</button>';
+                echo '<button type="submit" class="btn btn-danger w-50">Eliminar</button>';
 
                 echo '</form>';
                 echo '<br>';
@@ -59,7 +58,6 @@ class Product {
 
             $statement->bindValue(':id', $id, PDO::PARAM_INT);
             $statement->execute();
-            echo "Element deleted successfully!";
 
         } catch (\Throwable $th) {
             echo "Somethin went wrong " . $th;

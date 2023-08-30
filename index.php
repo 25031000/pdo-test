@@ -15,17 +15,17 @@
   <!--NAVEGATION-->
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand p-3">
-      Controversy
+      Gestion de productos
     </a>
   </nav>
 
   <div class="container-fluid">
-    <h1 class="p-3">Aplication</h1>
+    <h1 class="p-3">Seccion productos</h1>
     <div id="app" class="row pt-5 pb-5 border border-dark">
       <div class="col-md-8 p-3">
         <div class="card">
           <div class="card-header bg-primary">
-            <h4 class="text-white">List of Products</h4>
+            <h4 class="text-white">Lista de productos</h4>
           </div>
           <div class="card-body" id="accordionExample">
             <?php
@@ -43,46 +43,39 @@
       <div class="col-md-4 p-3 border ">
         <div class="card">
           <div class="card-header bg-primary">
-            <h4 class="text-white">Add a product</h4>
+            <h4 class="text-white">Agregar producto</h4>
           </div>
           <form id="product-form" action="controllers/product-insert.php" method="post" class="form card-body">
             <div class="input-group mb-3">
-              <input type="text" id="name" name="name" placeholder="Product name" class="form-control">
+              <input type="text" id="name" name="name" placeholder="Nombre producto" class="form-control">
             </div>
             <div class="input-group mb-3">
-              <input type="number" step="0.01" name="price" max="10000000" id="price" placeholder="Product price"
+              <input type="number" step="0.01" name="price" max="10000000" id="price" placeholder="Precio producto"
                 class="form-control">
             </div>
             <div class="d-grid">
-              <input type="submit" class="btn btn-primary">
+              <input type="submit" value="Agregar" class="btn btn-primary">
             </div>
 
           </form>
         </div>
-      </div>
-    </div>
-    <div class="row pt-5 pb-5">
-      <div class="col-md-8 p-3">
-
-      </div>
-      <div class="col-md-4 p-3 border ">
-        <div class="card">
-          <div class="card-header bg-primary">
-            <h4 class="text-white">Update product</h4>
+        <div class="card mt-3">
+          <div class="card-header bg-success">
+            <h4 class="text-white">Actualizar producto</h4>
           </div>
           <form id="product-form" action="controllers/product-update.php" method="post" class="form card-body">
           <div class="input-group mb-3">
-              <input type="text" id="id" name="id" placeholder="Product identifier" class="form-control">
+              <input type="text" id="id" name="id" placeholder="Numero de producto" class="form-control">
             </div>
             <div class="input-group mb-3">
-              <input type="text" id="name" name="name" placeholder="Product name" class="form-control">
+              <input type="text" id="name" name="name" placeholder="Nombre de producto nuevo" class="form-control">
             </div>
             <div class="input-group mb-3">
-              <input type="number" step="0.01" name="price" max="10000000" id="price" placeholder="Product price"
+              <input type="number" step="0.01" name="price" max="10000000" id="price" placeholder="Precio de producto nuevo"
                 class="form-control">
             </div>
             <div class="d-grid">
-              <input type="submit" class="btn btn-primary">
+              <input type="submit" value="Actualizar" class="btn btn-success">
             </div>
 
           </form>
